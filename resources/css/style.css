@@ -1,0 +1,294 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+                                                              /* General Styles */
+:root{
+  --darkblue: #38485c;
+  --white: #fff;
+  --cloud: #c5c6d0;
+  --yellow: #ffdb2e;
+  --darkgray: #333333;
+  --black: #000000;
+  --green: #47a247;
+  --gray: #808080;
+  --red: #ff0000;
+  --font-family-sans-serif: "Open Sans",(system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");
+}
+body{
+  font-size: 64.5%;
+  font-family: var(--font-family-sans-serif);
+}
+li{
+  list-style: none;
+}
+#conferencia,
+#oradores,
+#lugar,
+#contacto{
+  height: 5vh;
+}
+                                                              /* Header's styles */
+.header{
+  display: flex;
+  position: fixed;
+  min-width: 100%;
+  height: 3.5rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--darkgray);
+  margin-bottom: 5rem;
+}
+.header .log{
+  width: 5rem;
+  height: 3rem;
+  padding-right: -5rem;
+  cursor: pointer;
+}
+.conf{
+  color: var(--white);
+  position: relative;
+  right: 14rem;
+  top: .5rem;
+}
+.header-ul{
+  display: flex;
+}
+.header-a{
+  margin-right: 1rem;
+  position: relative;
+  top: .5rem;
+  color: var(--gray);
+  font-size: 1rem;
+  text-decoration: none;
+}
+.header-a[href*="conferencia"]{
+  color: var(--white);
+}
+.header-a[href*="ticket"]{
+  color: var(--yellow);
+}
+                                                                /* Main's styles */
+                    /*Conferencia's Class Styles */
+.conferencia{
+  width: 100%;
+  height: 80vh;
+}
+.conferencia .place{
+  width: 100%;
+  height: 80vh;
+}
+.conferencia .conf-text{
+  width: 100%;
+  height: 79.8%;
+  position: absolute;
+  top: 3.5rem;
+  bottom: 13rem;
+  text-align: right;
+  background: rgb(0, 0, 0);
+  background: rgb(0, 0, 0, 0.5);
+  color: var(--white);
+  padding-top: 12rem;
+  padding-right: 9.4rem;
+  padding-left: 40rem;
+}
+.conf-text .buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+.conf-text button{
+  width: 7rem;
+  height: 2rem;
+  border-radius: 5px;
+  font-size: .8rem;
+}
+.conf-text .quiero{
+  background-color: transparent;
+  border: 1px var(--white) solid;
+  color: var(--white);
+  margin-right: .8rem;
+}
+.conf-text .comprar{
+  background-color: var(--green);
+  border: 1px var(--green) solid;
+  color: var(--white);
+}
+                    /*Oradores' Styles  */
+.oradores{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.oradores > p{
+  text-transform: uppercase;
+  margin-top: .5rem;
+  color: var(--black);
+}
+.oradores h2{
+  position: relative;
+  bottom: 1rem;
+}
+.oradores .contenido-oradores{
+  display: flex;
+  justify-content: space-between;
+}
+.oradores .ficha{
+  width:15.1rem;
+  margin-right: 2rem;
+  border: 1px var(--cloud) solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.oradores .foto-perfil{
+  width: 15rem;
+  height: 15rem;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.oradores .bio{
+  width: 15rem;
+  margin-right: 2rem;
+  font-size: .7rem;
+  padding: .5rem .5rem 0 .5rem;
+}
+.oradores .js{
+  border-radius: 3px;
+  background-color: var(--yellow);
+  font-weight: bolder;
+  padding: 0 2px;
+  margin-right: 3px;
+}
+.oradores .react{
+  border-radius: 3px;
+  background-color: var(--gray);
+  color: var(--white);
+  font-weight: bolder;
+  padding: 0 2px;
+}
+.oradores .negocios{
+  border-radius: 3px;
+  background-color: var(--gray);
+  color: var(--white);
+  font-weight: bolder;
+  padding: 0 2px;
+  margin-right: 2px;
+}
+.oradores .start{
+  border-radius: 3px;
+  background-color: var(--red);
+  color: var(--white);
+  font-weight: bolder;
+  padding: 0 2px;
+}
+                    /* Lugar's Styles */
+.lugar{
+  display: flex;
+  margin: .1rem;
+}
+.lugar .paisaje{
+  width: 50%;
+  height: 70vh;
+}
+.lugar .recuadro{
+  width: 50%;
+  height: 70vh;
+  background-color: var(--darkgray);
+  margin-left: .07rem;
+  padding: 0 .5rem;
+  text-align: left;
+  color: var(--cloud);
+}
+.lugar .recuadro .transparente{
+  background-color: transparent;
+  width: 6.5rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: var(--cloud);
+  text-align: center;
+}
+                    /*Contacto's Styles  */
+.contacto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.contacto > p:nth-child(1){
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: .5rem;
+}
+.contacto > h2{
+  text-align: center;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 1rem;
+}
+.contacto > p{
+  text-align: center;
+  margin-top: 0;
+}
+.contacto span{
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.contacto-formulario {
+  width: 55rem;
+  margin-left: 22rem;
+}
+.contacto-formulario label{
+  margin: 0;
+  padding: 0;
+}
+.contacto-formulario input{
+  width: 25rem;
+  margin-right: 0.95rem;
+}
+.contacto-formulario input[placeholder],
+textarea[placeholder]{
+  font-style: italic;
+}
+.contacto-formulario textarea{
+  width: 51.2rem;
+  margin-top: .5rem;
+}
+.contacto-formulario p{
+  font-size: .8rem;
+  color: var(--gray);
+}
+.contacto-formulario .submit{
+  width: 51.2rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  background-color: var(--green);
+  border: var(--green);
+  color: var(--white);
+}
+                                                              /* Footer's styles */
+.footer{
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  height: 3.5rem;
+  align-items: center;
+  background-color: var(--darkblue);
+  color: var(--cloud);
+}
+.ul-footer{
+  display: flex;
+}
+.li-footer{
+  margin: 1rem 2rem 0 3rem;
+  width: 5.5rem;
+  text-align: center;
+  font-size: .8rem;
+  cursor: pointer;
+}
+.li-footer[class~="middle"]{
+  margin-top: 1.5rem;
+}
